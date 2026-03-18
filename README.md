@@ -9,6 +9,13 @@ Team Members
 | Cheng Yang Lai | | cyl74@sfu.ca |
 | Namandeep Kaur | 301553233 | nka87@sfu.ca |
 
+| Name | Student No. |
+|--------|-------------|
+| Protocol | TCP |
+| Clients | Multiple |
+| Interface | CLI |
+
+
 ## 1. Project Overview
    ### 1.1 Description
 
