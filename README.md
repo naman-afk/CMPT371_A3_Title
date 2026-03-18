@@ -5,6 +5,7 @@ Instructor: Mirza Zaeem Baig
 Semester: Spring 2026
 
 Team Members
+|----------------|-------|-------|
 | Cheng Yang Lai | | cyl74@sfu.ca |
 | Namandeep Kaur | 301553233 | nka87@sfu.ca |
 
