@@ -8,7 +8,7 @@ Team Members
 - Cheng Yang Lai - - cyl74@sfu.ca
 - Namandeep Kaur - 301553233 - nka87@sfu.ca
 
-1. Project Overview
+## H2 1. Project Overview
    1.1 Description
 
    1.2 Architecture
