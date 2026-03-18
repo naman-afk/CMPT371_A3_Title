@@ -1,8 +1,8 @@
 # CMPT371_A3_Title
 
-Course: CMPT371 - Data Communications & Networking
-Instructor: Mirza Zaeem Baig
-Semester: Spring 2026
+- Course: CMPT371 - Data Communications & Networking
+- Instructor: Mirza Zaeem Baig
+- Semester: Spring 2026
 
 Team Members
 | Name | Student No. | emai |
