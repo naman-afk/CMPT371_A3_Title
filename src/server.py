@@ -143,9 +143,9 @@ def game_session(players):
                 
                 #Translate the topcard if needed(wild)
                 topCardSuit=game.top_card.split()[1]
-                if(topCardSuit==-1):
+                if(topCardSuit=="-1"):
                     top_Card=game.top_card.split()[0]+" CARD"
-                elif topCardSuit==-2:
+                elif topCardSuit=="-2":
                     top_Card=game.top_card.split()[0]+" DRAW4"
                 else:
                     top_Card=game.top_card
