@@ -175,7 +175,17 @@ def game_session(players):
 
 def start_server():
     #get number of playsers
-    num_players = int(input("Players per game (2-5): "))
+    while True:
+        try:
+            num_players = int(input("Players per game (2-5): "))
+        except ValueError:
+            print("Invalid input. Please enter a number, not letters.")
+            continue 
+        if num_players > 5 or num_players < 2:
+            print("Please insert a value within the range 2-5")
+        else:
+            break
+        
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  
     server.bind((HOST, PORT))
