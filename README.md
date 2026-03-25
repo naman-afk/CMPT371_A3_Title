@@ -39,6 +39,15 @@ Team Members
 
    ### 1.4 Limitations & Edge Cases
       - Each game starts fresh
+         -Solution: Start playing the game and the game will not be fresh no more
+      - Cannot handle cases where all cards are in hands and none is left within the deck/discard
+         -Solution: Please play the cards and don't just keep drawing cards
+      - Only 2-5 players, cannot handle more or less(no robot to play against you)
+         -Solution: Take turn playing with friends if have more than 5 players
+      - When one client wins/quit, the server keeps running and looks for client to connect to unless you manually close it
+         -Solution: Manually close the server when you are finish playing
+      
+      
 
 ## 2. Demo Video
 
