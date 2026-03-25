@@ -14,9 +14,9 @@ Team Members
 
 ## 1. Project Overview
    ### 1.1 Description
-   This project is a terminal based multiplayer card game inspired by UNO, built by using Python sockets.
+   This project is a terminal based multiplayer card game inspired by UNO constructed by using Python sockets.
    The client handles keyboard input, renders UI, and communicates with the server using a simple JSON protocol.
-   The server manages turns, card rules, and game flow.
+   The server is in charge of turns, card rules, and the game.
 
    ### 1.2 Architecture
    Server:
@@ -29,7 +29,7 @@ Team Members
       - Connects to server over TCP
       - Renders the game UI using Rich
       - Sends play actions
-      - Handles card/wildcard suit selection
+      - Deals with card/wildcard suit selection
       - Displays end-of-game messages
 
    UI Layer:
