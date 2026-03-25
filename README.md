@@ -50,7 +50,7 @@ Team Members
       
 
 ## 2. Demo Video
-
+[Demo Video Here on Youtube](https://www.youtube.com/watch?v=2-cLr3RGzUo)
 ## 3. How to run
    ### 3.1 Prerequisites
    - Python version 3.10+
