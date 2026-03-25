@@ -9,4 +9,4 @@ class GState:
         self.my_turn=False
         self.num_players=None #size
         self.selected = 0
-        self.player_names = {}
+        self.pending_announcement=None

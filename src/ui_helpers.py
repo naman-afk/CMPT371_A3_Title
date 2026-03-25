@@ -1,4 +1,7 @@
-# ui_helpers.py  -- minimal Rich-based UI helpers
+#Acknowledgement: 
+# Portions of this UI code were developed with assistance from ChatGPT
+
+#  ui_helpers.py  -- minimal Rich-based UI helpers
 
 import os
 import sys
@@ -13,10 +16,6 @@ from rich.panel import Panel
 from rich.text import Text
 
 console = Console()
-
-# =========================
-# BASIC TERMINAL UTILITIES
-# =========================
 
 def clear_screen() -> None:
     if os.name == "nt":
@@ -35,10 +34,6 @@ def hide_cursor() -> None:
 def show_cursor() -> None:
     sys.stdout.write("\033[?25h")
     sys.stdout.flush()
-
-# =========================
-# LAYOUT: HEADER / BODY / FOOTER
-# =========================
 
 def make_layout() -> Layout:
     layout = Layout()
@@ -88,10 +83,6 @@ def render_footer(hand: List[str], selected_index: int, cols: int = 2) -> Panel:
     t.append("\n↑/↓ to move, ENTER to play, D to draw, Q to quit", style="cyan")
     return Panel(t, border_style="white")
 
-# =========================
-# GLITCH SHRED TRANSITION (OPTIONAL)
-# =========================
-
 def shred_ui(duration: float = 1.0, steps: int = 10) -> None:
     hide_cursor()
     try:
@@ -108,43 +99,14 @@ def shred_ui(duration: float = 1.0, steps: int = 10) -> None:
     finally:
         show_cursor()
 
-# =========================
-# ANNOUNCEMENT POP-UP
-# =========================
 
-def show_announcement(message: str, duration: float = 2.0) -> None:
-    # Enter alternate buffer
-    sys.stdout.write("\033[?1049h")
-    sys.stdout.flush()
-    hide_cursor()
-    try:
-        clear_screen()
-        move_cursor_home()
-        for _ in range(3):
-            console.print(Text(message, style="bold red"), justify="center")
-            console.print(Text(message, style="bold cyan"), justify="center")
-            console.print(Text(message, style="bold white"), justify="center")
-            time.sleep(0.15)
-            clear_screen()
-            move_cursor_home()
-        console.print(
-            Panel(
-                Text(message, justify="center", style="bold magenta"),
-                title="SERVER ANNOUNCEMENT",
-                border_style="yellow",
-            ),
-            justify="center",
-        )
-        time.sleep(duration)
-    finally:
-        # Leave alternate buffer
-        sys.stdout.write("\033[?1049l")
-        sys.stdout.flush()
-        show_cursor()
-
-# =========================
-# SIMPLE API FOR CLIENT
-# =========================
+def render_announcement_panel(message: str) -> Panel:
+    return Panel(
+        Text(message, justify="center", style="bold magenta"),
+        title="SERVER ANNOUNCEMENT",
+        border_style="yellow",
+        padding=(1, 2),
+    )
 
 def render_game_state(round_number: int,
                       current_player: str,
@@ -159,3 +121,16 @@ def render_game_state(round_number: int,
     layout["body"].update(render_body(discard_top))
     layout["footer"].update(render_footer(hand, selected_index=0))
     console.print(layout)
+
+def render_suit_selector(selected_index: int = 0) -> Panel:
+    suits = ["STEEL", "NICKLE", "IRON", "EUROPIUM"]
+    t = Text("Choose a Suit:\n\n", style="bold white")
+
+    for i, suit in enumerate(suits):
+        if i == selected_index:
+            t.append(f"> {suit}\n", style="bold underline green")
+        else:
+            t.append(f"  {suit}\n", style="white")
+
+    t.append("\n↑/↓ to move, ENTER to select", style="cyan")
+    return Panel(t, border_style="magenta", title="WILD CARD")
