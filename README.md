@@ -37,18 +37,15 @@ Team Members
       - Footer shows Player's hand and wildcard suit selector<br>
       - WIn/Lose state displayed<br>
 
-   ### 1.4 Limitation and Edge Cases
-
-    -Each game starts fresh<br>
-         -Solution: Start playing the game and the game will not be fresh no more<br>
-      - Cannot handle cases where all cards are in hands and none is left within the deck/discard<br>
-         -Solution: Please play the cards and don't just keep drawing cards<br>
-      - Only 2-5 players, cannot handle more or less(no robot to play against you)<br>
-         -Solution: Take turn playing with friends if have more than 5 players<br>
-      - When one client wins/quit, the server keeps running and looks for client to connect to unless you manually close it<br>
-         -Solution: Manually close the server when you are finish playing<br>
-      
-      
+### 1.3 Limitations
+  - Each game starts fresh
+     -Solution: Start playing the game and the game will not be fresh no more
+  - Cannot handle cases where all cards are in hands and none is left within the deck/discard
+     -Solution: Please play the cards and don't just keep drawing cards
+  - Only 2-5 players, cannot handle more or less(no robot to play against you)
+     -Solution: Take turn playing with friends if have more than 5 players
+  - When one client wins/quit, the server keeps running and looks for client to connect to unless you manually close it
+     -Solution: Manually close the server when you are finish playing  
 
 ## 2. Demo Video<br>
 [Demo Video Here on Youtube](https://www.youtube.com/watch?v=2-cLr3RGzUo)<br>
